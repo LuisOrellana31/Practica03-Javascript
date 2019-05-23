@@ -4,13 +4,155 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="es">
+   <head>    
+    <title>Título de la WEB</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Calculadora">
+    <meta name="description" content="Calculadora"> 
+        
+   <link rel="stylesheet" type="text/css" href="css/estiloCalcu.css" media="screen"/> 
+      <script type="text/javascript">
+          
+          numero();
+          
+          
+          var total = 0;
+          var opc = ''; 
+          
+          
+          function numero(n){
+              var txtResultado = document.getElementById("resp");
+           if(txtResultado != null){
+               txtResultado.value += n;
+               
+           }   
+              
+          } 
+          
+                function sumar(){
+              
+              var txtResultado = document.getElementById("resp");
+              if(txtResultado != null){
+                  total = parseFloat(resp.value);
+                  resp.value= '';
+          } 
+          
+          opc='+'
+              
+          }
+          
+                function restar(){
+              
+              var txtResultado = document.getElementById("resp");
+              if(txtResultado != null){
+                  total = parseFloat(resp.value);
+                  resp.value= '';
+          } 
+          
+          opc='-'
+              
+          }
+          
+                function multiplicar(){
+              
+              var txtResultado = document.getElementById("resp");
+              if(txtResultado != null){
+                  total = parseFloat(resp.value);
+                  resp.value= '';
+          } 
+          
+          opc='*'
+              
+          }
+          
+                function dividir(){
+              
+              var txtResultado = document.getElementById("resp");
+              if(txtResultado != null){
+                  total = parseFloat(resp.value);
+                  resp.value= '';
+          } 
+          
+          opc='/'
+              
+          }
+          
+          function calc(){
+              var txtResultado = document.getElementById("resp");
+               if(txtResultado != null){
+                   switch(opc){
+                           
+                           case '+':
+                           total += parseFloat(resp.value);
+                            resp.value= total;
+                           break;
+                           
+                            case '-':
+                           total -= parseFloat(resp.value);
+                            resp.value= total;
+                           break;
+                           
+                            case '*':
+                           total *= parseFloat(resp.value);
+                            resp.value= total;
+                           break;
+                           
+                            case '/':
+                           total /= parseFloat(resp.value);
+                            resp.value= total;
+                           break;
+                           
+                   }
+                   total = 4;
+                   
+                   }
+          }  
+            
+      </script>
+      
+</head>  
+  
+  <body> 
+      
+      
+<form name="calculator">
+    
+<input type="textfield" name="resp" id="resp">
+
+    <br>
+    
+   <input class="button14" type="button" value="1" onclick="numero('1')" id="uno" />
+<input class="button15" type="button" value="2" onclick="numero('2')"id="dos"  />
+<input class="button16" type="button" value="3" onclick="numero('3')"id="tres"  />
+    
+    <input type="button" value="+" onclick="sumar('+')" id="+"  />
+    
+    <br>
+    
+    <input class="button9" type="button" value="4" onclick="numero('4')" id="cuatro" />
+<input class="button10" type="button" value="5" onclick="numero('5')"id="cinco"  />
+<input class="button11" type="button" value="6" onclick="numero('6')"id="seis"  />
+    
+ <input class="button17" type="button" value="-" onclick="restar('-')" id="-" />
+    
+    <br>
+    
+   <input class="button4" type="button" value="7" onclick="numero(7)"id="siete"  />
+<input class="button5" type="button" value="8" onclick="numero('8')" id="ocho" />
+<input class="button6" type="button" value="9" onclick="numero('9')"id="nueve"  />
+    
+   <input class="button12" type="button" value="*" onclick="multiplicar('*')" id="*" />
+    
+    <br>
+    
+    <input class="button19" type="button" value="0" onclick="numero('0')"id="cero"  />
+    <input type="reset" value="c">
+   <input type="button" value="/" onclick="dividir('/')" id="-"  />
+    <input type="button" value="=" onclick="calc()" id="=" />
+
+</form>
+    
+
+  </body>  
 </html>
