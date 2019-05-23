@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/> 
+        <title>Formulario</title>
+        <meta name="keywords" content="HTML5, CSS, JavaScript, content, margin"/>
+        <link href="css/estilos.css" rel="stylesheet"/>
+    </head>
+
+
+    <body>
+        <form action="/my-handling-form-page" onsubmit="return validarCamposObligatorios()">
+
+            <h2>Formulario</h2>
+            <div>
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" placeholder="Ingrese Cedula" value="" onblur="validarcedu(this)" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" placeholder="Ingrese su cédula"/>
+                <p id="mensajeCedula" class ="note"></p>
+
+            </div>
+
+            <div>
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" placeholder="Nombres" value="" onkeypress="return soloLetras(event);"/>
+                <p id="mensajeNombre" class ="note"></p>
+                
+            </div>
+
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" placeholder="Apellidos" value="" onkeypress="return soloLetras(event);"/>
+                <p id="mensajeApellido" class ="note"></p>
+            </div>
+                          
+            <div>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" placeholder="Ingrede Direccion" value=""/>
+                <p id="mensajeDireccion" class ="note"></p>
+            </div>
+
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" placeholder="Ingrese Telefono" value="" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <p id="mensajeTelefono" class ="note"></p>
+            </div>
+
+            <div>
+                <label for="fechaNacimiento">Nacimiento:</label>
+                <input type="text" id="fechaNacimiento" placeholder="dd/mm/yyyy" onblur =" validarFecha(this)"/>
+                <p id="mensajeFecha" class ="note"></p>
+            </div>
+
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="correo" id="correo" placeholder="ejemplo@est.ups.edu.ec/ups.edu.ec" value="" oninput="validarCorreo(this)"/>
+                <p id="mensajeCorreo" class ="note"></p>
+            </div>
+
+            <div class="button">
+                    <button type="submit">Envia tu mensaje</button>
+            </div>
+
+        </form>
+
+        <script type="text/javascript" src="./js/validar.js"></script>
+
+    </body>
+</html>
