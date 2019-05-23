@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 
-array = [{ "id": 1, "imagen": "images/1.jpg" },
-{ "id": 2, "imagen": "images/2.jpg" },
-{ "id": 3, "imagen": "images/3.jpg" },
-{ "id": 4, "imagen": "images/4.jpg" },
-{ "id": 5, "imagen": "images/5.jpg" },
-{ "id": 6, "imagen": "images/6.jpg" },
-{ "id": 7, "imagen": "images/7.jpg" },
-{ "id": 8, "imagen": "images/8.jpg" },
-{ "id": 9, "imagen": "images/9.jpg" },
+array = [{ "id": 1, "imagen": "images/1.JPG" },
+{ "id": 2, "imagen": "images/2.JPG" },
+{ "id": 3, "imagen": "images/3.JPG" },
+{ "id": 4, "imagen": "images/4.JPG" },
+{ "id": 5, "imagen": "images/5.JPG" },
+{ "id": 6, "imagen": "images/6.JPG" },
+{ "id": 7, "imagen": "images/7.JPG" },
+{ "id": 8, "imagen": "images/8.JPG" },
+{ "id": 9, "imagen": "images/9.JPG" },
 { "id": 10, "imagen": "images/10.jpg" }];
 imagenes = [1, 2, 3, 4, 5];
 
